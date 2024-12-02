@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/violet"
+    tools:context=".view.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/main_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toRightOf="@+id/profile_image"
+                android:text="Score"
+                android:textColor="@color/orang" />
+
+            <LinearLayout
+                android:id="@+id/myRectangleView"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/txt_score"
+                android:layout_marginStart="-20dp"
+                android:layout_marginTop="-10dp"
+                android:layout_toRightOf="@id/profile_image"
+                android:background="@drawable/custom_shape"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/txt_score_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:gravity="center"
+                    android:text="500"
+                    android:textColor="@color/orang" />
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/bell">
+
+            <LinearLayout
+                android:id="@+id/myView"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/profile_image_other"
+                android:background="@drawable/custom_shape2_blue"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/txt_score_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/profile_image"
+                    android:gravity="center"
+                    android:text="500"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_other"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="-20dp"
+                android:src="@drawable/ic_launcher_background"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/bell"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_doorbell_24"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/searchLL"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/bell"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_shape2_blue">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@null"
+                android:drawableStart="@drawable/baseline_search_24"
+                android:hint="Search for Games , Tournaments "
+                android:textColorHint="@color/black"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/player_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchLL"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/singleplayer_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/single_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Single Player"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/singleview"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="2dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/multiplayer_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/multi_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Multi Player"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/multiv"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="2dp"
+                    android:visibility="gone"
+                    android:background="@color/white" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVSinglePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/player_ll"
+            android:layout_marginTop="20dp"
+            tools:listitem="@layout/item_player_list" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVMultiPlayer"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/player_ll"
+            android:layout_marginTop="20dp"
+            tools:listitem="@layout/item_player_list" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
